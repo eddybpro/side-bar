@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #eee;
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+header nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
+
+header nav .heading{
+    text-transform: capitalize;
+    font-size: 2.5rem;
+}
+
+header nav .heading a{
+    color: #222;
+}
+
+header nav .heading a span{
+    color: #112499;
+    text-decoration: underline;
+}
+
+header nav .list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+header nav .list li{
+    margin-right: .5rem;
+}
+
+header nav .list li a{
+    color: rgb(31, 1, 80);
+    padding: .4rem 1rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    transition: .2s ease-out; 
+}
+
+header nav .list li a:hover{
+    background-color: rgb(3, 126, 126);
+    color: #fff;
+    
+}
+
+header nav .menu{
+    display: none;
+}
+
+
+@media screen and (max-width:768px) {
+    header nav .menu{
+        display: inline-block;
+    }
+
+    header nav .menu i{
+        font-size: 1.5rem;
+        color: #222;
+        cursor: pointer;
+        transition: .2s linear;
+    }
+
+    .fa-times{
+        transform: rotate(90deg);
+        transition: .2s linear;
+    }
+
+    header nav .list{
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        top: 100%;
+        left: -100%; 
+        flex-direction: column;
+        background-color: rgba(0 , 0 , 0, 0.7);
+        transition: .3s linear;
+    }
+
+    header nav .active{
+        left: 0;
+        transition: .3s linear;
+    }
+
+    header nav .active li{
+        margin-bottom: 1rem;
+    }
+
+    header nav .list li a{
+        color: #fff;
+        transition: .2s ease-in-out;
+        border-radius: 0;
+    }
+
+    header nav .list li a:hover{
+        background: none;
+        border-bottom: 2px solid #fff;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
